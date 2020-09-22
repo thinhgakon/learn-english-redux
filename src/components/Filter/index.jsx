@@ -1,6 +1,11 @@
 import React from "react";
 import "./Filter.css";
 import { connect } from "react-redux";
+import {
+  filterShowAll,
+  filterMemorized,
+  filterNeedPractice,
+} from "./../../actions/filterStatus";
 
 class Filter extends React.Component {
   getTextStyle(statusName) {
@@ -15,7 +20,7 @@ class Filter extends React.Component {
       <div className="filter-box">
         <div
           onClick={() => {
-            this.props.dispatch({ type: "FILTER_SHOW_ALL" });
+            this.props.dispatch(filterShowAll());
           }}
           className="filter-btn"
           style={this.getTextStyle("SHOW_ALL")}
@@ -24,7 +29,7 @@ class Filter extends React.Component {
         </div>
         <div
           onClick={() => {
-            this.props.dispatch({ type: "FILTER_MEMORIZED" });
+            this.props.dispatch(filterMemorized());
           }}
           className="filter-btn"
           style={this.getTextStyle("MEMORIZED")}
@@ -33,7 +38,7 @@ class Filter extends React.Component {
         </div>
         <div
           onClick={() => {
-            this.props.dispatch({ type: "FILTER_NEED_PRACTICE" });
+            this.props.dispatch(filterNeedPractice());
           }}
           className="filter-btn"
           style={this.getTextStyle("NEED_PRACTICE")}

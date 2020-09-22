@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./AddWordForm.css";
 import { connect } from "react-redux";
+import { addWord } from "./../../actions/arrWords";
 
 class AddWordForm extends Component {
   constructor(props) {
@@ -19,11 +20,7 @@ class AddWordForm extends Component {
   }
   onAdd() {
     const { en, vn } = this.state;
-    this.props.dispatch({
-      type: "ADD_WORD",
-      en,
-      vn,
-    });
+    this.props.dispatch(addWord(en, vn));
     this.setState({ en: "", vn: "" });
   }
   render() {

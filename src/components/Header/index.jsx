@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { connect } from "react-redux";
+import { toggleIsAdding } from "./../../actions/isAdding";
 
 class Header extends React.Component {
   render() {
@@ -11,7 +12,7 @@ class Header extends React.Component {
         <div className="app-name">My Words</div>
         <div
           onClick={() => {
-            this.props.dispatch({ type: "TOGGLE_IS_ADDING" });
+            this.props.dispatch(toggleIsAdding());
           }}
           className="btn-add"
         >

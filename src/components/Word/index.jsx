@@ -1,25 +1,24 @@
 import React from "react";
 import "./Word.css";
 import { connect } from "react-redux";
+import {
+  toggleMemorized,
+  toggleShow,
+  removeWord,
+} from "./../../actions/arrWords";
 
 class Word extends React.Component {
   memorizedWord() {
-    this.props.dispatch({
-      type: "TOGGLE_MEMORIZED",
-      id: this.props.word.id,
-    });
+    const { id } = this.props.word;
+    this.props.dispatch(toggleMemorized(id));
   }
   showWord() {
-    this.props.dispatch({
-      type: "TOGGLE_SHOW",
-      id: this.props.word.id,
-    });
+    const { id } = this.props.word;
+    this.props.dispatch(toggleShow(id));
   }
   removeWord() {
-    this.props.dispatch({
-      type: "REMOVE_WORD",
-      id: this.props.word.id,
-    });
+    const { id } = this.props.word;
+    this.props.dispatch(removeWord(id));
   }
   render() {
     const { en, vn, memorized, isShow } = this.props.word;
