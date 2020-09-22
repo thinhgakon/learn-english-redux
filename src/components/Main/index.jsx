@@ -18,6 +18,7 @@ class Main extends React.Component {
 
   render() {
     const { isAdding } = this.props;
+    console.log(this.props);
     return (
       <div className="main-wrapper">
         <Header />
