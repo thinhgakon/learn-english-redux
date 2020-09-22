@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: darkolivegreen;
+  color: white;
+  align-items: center;
+}
+.app-name {
+  flex: 10;
+  text-align: center;
+  text-transform: uppercase;
+}
+.btn-add {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+  cursor: pointer;
+}

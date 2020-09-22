@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: lightslategrey;
+}
+.main-wrapper {
+  width: 400px;
+  height: 680px;
+  border-radius: 5px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: wheat;
+}
+.list-word {
+  flex: 9;
+  overflow-y: scroll;
+}

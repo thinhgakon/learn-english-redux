@@ -1,0 +1,16 @@
+.form-add-word {
+  margin-bottom: 5px;
+}
+.form-add-word input {
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px;
+}
+.btn-add-new-word {
+  background-color: thistle;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px;
+  font-weight: bold;
+  color: gray;
+}
